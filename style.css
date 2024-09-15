@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style-type: none;
+    box-sizing: border-box;
+}
+body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-image: url(https://www.shutterstock.com/image-vector/illustration-design-bannertakeoff-plane-against-260nw-1513524131.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+nav{
+    background: rgba(210, 105, 30, 0.63);
+    tr
+    height: 5rem;
+    width: 100%;
+}
+label.logo{
+    font-weight: bolder;
+    color: white;
+    font-size: 2.5rem;
+    line-height: 5rem;
+    padding: 0 5rem;
+    cursor: pointer;
+}
+nav ul{
+    float: right;
+    margin-right: 3rem;
+}
+nav ul li{
+    display: inline-block;
+    line-height: 5rem;
+    margin: 0 0.5rem;
+}
+nav ul li a{
+    font-size: 1.5rem;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.7rem 0.5rem;
+    border-radius:0.5rem;
+}
+a.active{
+    background-color: rgb(78, 47, 47);
+}
+a:hover{
+    background-color: rgb(78, 47, 47);
+    transition: 1.5s;
+}
+.checkbtn{
+    font-size: 2.5rem;
+    color: white;
+    line-height: 5rem;
+    float: right;
+    margin-right: 3rem;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+@media (max-width:952px){
+    label.logo{
+        font-size: 2.5rem;
+        padding-left: 3rem;
+    }
+    nav ul li{
+        margin: 0 0.01rem;
+    }
+    nav ul li a{
+        font-size: 1rem;
+    }
+}
+@media (max-width:858px){
+    .checkbtn{
+        display: block;
+    }
+    ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: coral;
+        top: 5rem;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    nav ul li {
+        display: block;
+    }
+    nav ul li a{
+        font-size: 2rem;
+        font-weight: bolder;
+    }
+    a:hover,a.active{
+        background: none;
+        color: rgb(78, 47, 47);
+        transition: 0.3s;
+    }
+    #check:checked ~ ul{
+        left: 0;
+    }
+}
